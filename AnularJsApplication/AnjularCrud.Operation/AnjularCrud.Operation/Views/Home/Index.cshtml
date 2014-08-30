@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "StudentView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Student View</h2>
+
+@*<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>*@
+
+<div data-ng-app data-ng-controller="studentController" class="container">
+    <strong class="error">{{ error }}</strong>
+    <p data-ng-hide="addMode"><a data-ng-click="toggleAdd()" href="javascript:;" class="btn btn-primary">Add New</a></p>
+    <form name="addStudent" data-ng-show="addMode" style="width:600px;margin:0px auto;">
+        @*<label>FirstName:</label><input type="text" data-ng-model="newfriend.FirstName" required />
+        <label>LastName:</label><input type="text" data-ng-model="newfriend.LastName" required />
+        <label>Address:</label><input type="text" data-ng-model="newfriend.Address" required />
+        <label>City:</label><input type="text" data-ng-model="newfriend.City" required />
+        <label>PostalCode:</label><input type="text" data-ng-model="newfriend.PostalCode" required />
+        <label>Country:</label><input type="text" data-ng-model="newfriend.Country" required />
+        <label>Notes:</label><input type="text" data-ng-model="newfriend.Notes" required />
+        <br />
+        <br />
+        <input type="submit" value="Add" data-ng-click="add()" data-ng-disabled="!addFriend.$valid" class="btn btn-primary" />
+        <input type="button" value="Cancel" data-ng-click="toggleAdd()" class="btn btn-primary" />
+        <br /><br />*@
+    </form>
+    <table class="table table-bordered table-hover" style="width:800px">
+        <tr>
+            <th>#</th>
+            <td>FirstName</td>
+            <th>LastName</th>
+            <th>City</th>
+            <th>City</th>
+        </tr>
+
+        <tr data-ng-repeat="student in students">
+            <td><strong data-ng-hide="student.editMode">{{ student.Id }}</strong></td>
+            <td>
+                <p data-ng-hide="student.editMode">{{ student.FirstName }}</p>
+                <input data-ng-show="student.editMode" type="text" data-ng-model="student.FirstName" />
+            </td>
+            <td>
+                <p data-ng-hide="student.editMode">{{ student.LastName }}</p>
+                <input data-ng-show="student.editMode" type="text" data-ng-model="student.LastName" />
+            </td>
+            <td>
+                <p data-ng-hide="student.editMode">{{ student.City }}</p>
+                <input data-ng-show="student.editMode" type="text" data-ng-model="student.City" />
+            </td>
+           
+            @*<td>
+                <p data-ng-hide="friend.editMode"><a data-ng-click="toggleEdit(friend)" href="javascript:;">Edit</a> | <a data-ng-click="deletefriend(friend)" href="javascript:;">Delete</a></p>
+                <p data-ng-show="friend.editMode"><a data-ng-click="save(friend)" href="javascript:;">Save</a> | <a data-ng-click="toggleEdit(friend)" href="javascript:;">Cancel</a></p>
+            </td>*@
+        </tr>
+    </table>
+    <hr />
+
+
+</div>
