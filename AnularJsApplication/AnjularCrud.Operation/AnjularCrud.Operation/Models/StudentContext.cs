@@ -14,6 +14,6 @@ namespace AnjularCrud.Operation.Models
             base.Configuration.ProxyCreationEnabled = false;
         }
 
-        public DbSet<Student> Student { get; set; }
+        public DbSet<Student> Students { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace AnjularCrud.Operation.Controllers
         [HttpGet]
         public IEnumerable<Student> Get()
         {
-            return db.Student.AsEnumerable();
+            return db.Students.AsEnumerable();
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace AnjularCrud.Operation.Controllers
         /// <returns></returns>
         public Student Get(int id)
         {
-            Student student = db.Student.Find(id);
+            Student student = db.Students.Find(id);
             if(student == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
@@ -47,7 +47,7 @@ namespace AnjularCrud.Operation.Controllers
         { 
             if(ModelState.IsValid)
             {
-                db.Student.Add(student);
+                db.Students.Add(student);
                 db.SaveChanges();
 
                 HttpResponseMessage message = Request.CreateResponse(HttpStatusCode.Created, student);
@@ -96,12 +96,12 @@ namespace AnjularCrud.Operation.Controllers
         /// <returns></returns>
         public HttpResponseMessage Delete(int Id)
         {
-            Student student= db.Student.Find(Id);
+            Student student= db.Students.Find(Id);
             if(student == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
-            db.Student.Remove(student);
+            db.Students.Remove(student);
             try
             {
                 db.SaveChanges();
