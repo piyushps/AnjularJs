@@ -1,0 +1,24 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation.v12.suo
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/App_Data/aspnet-AnjularCrud.Operation-20140830123800.mdf
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/App_Data/aspnet-AnjularCrud.Operation-20140830123800_log.ldf
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/Scripts/Student.js
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/Views/Home/Index.cshtml
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/Web.config
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/bin/AnjularCrud.Operation.dll
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/bin/AnjularCrud.Operation.dll.config
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/bin/AnjularCrud.Operation.pdb
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/obj/Debug/AnjularCrud.Operation.dll
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/obj/Debug/AnjularCrud.Operation.pdb
+#
+# Changes not staged for commit:
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/App_Data/AnjularCrud.Operation.mdf
+#	modified:   AnularJsApplication/AnjularCrud.Operation/AnjularCrud.Operation/App_Data/AnjularCrud.Operation_log.ldf
+#
+

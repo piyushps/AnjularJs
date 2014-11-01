@@ -1,29 +1,8 @@
-﻿//var app = angular.module('app', []);
-//app.controller('studentController', ['$scope', '$http', function ($scope, $http) {
-//    $scope.loading = true;
-//    $scope.addMode = false;
-
-//    $http.get('/api/Student/').success(function (data) {
-//        $scope.students = data;
-//        $scope.loading = false;
-//    })
-//    .error(function () {
-//        $scope.error("Error occured while loading data.");
-//        $scope.loading = false;
-//    });
-
-//    $scope.toggleEdit = function () {
-//        this.student.editMode = !this.student.editMode;
-//    };
-//    $scope.toggleAdd = function () {
-//        $scope.addMode = !$scope.addMode;
-//    }
-//}]);
-
+﻿
 function studentController($scope, $http) {
     $scope.loading = true;
     $scope.addMode = false;
-
+    console.log($scope);
     $http.get('/api/Student/').success(function (data) {
         $scope.students = data;
         $scope.loading = false;
@@ -55,6 +34,7 @@ function studentController($scope, $http) {
             $scope.loading = false;
 
         });
+
     };
 
     //Used to add a new record
@@ -68,9 +48,9 @@ function studentController($scope, $http) {
         }).error(function (data) {
             $scope.error = "An Error has occured while Adding Student! " + data;
             $scope.loading = false;
-
         });
     };
+
 
     //Used to edit a record
     $scope.deletestudent = function () {
